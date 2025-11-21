@@ -4,7 +4,7 @@ import { Link } from 'react-router';
 
 const Navbar = () => {
     return (
-        <div className=" shadow-sm">
+        <div className="navbar shadow-sm">
             <div className='navbar max-w-11/12 mx-auto'>
                 <div className="navbar-start">
                     <div className="dropdown">
