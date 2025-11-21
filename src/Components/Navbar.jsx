@@ -1,4 +1,5 @@
 import React from 'react';
+import { IoLogoGithub } from 'react-icons/io';
 import { Link } from 'react-router';
 
 const Navbar = () => {
@@ -31,7 +32,10 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <Link to='' className="btn">Contribute</Link>
+                    <div className='flex items-center btn'>
+                        <IoLogoGithub size={20} />
+                        <Link to='https://github.com/kabir-devx' target="_blank">Contribute</Link>
+                   </div>
                 </div>
             </div>
         </div>
