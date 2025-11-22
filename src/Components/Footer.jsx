@@ -2,8 +2,8 @@ import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
     return (
-        <div>
-            <footer className="footer sm:footer-horizontal bg-base-200 text-base-content p-10">
+        <div className="bg-[#001931] text-white">
+            <footer className="footer sm:footer-horizontal p-10">
                 <nav>
                     <h6 className="footer-title">Services</h6>
                     <a className="link link-hover">Branding</a>
@@ -25,7 +25,7 @@ const Footer = () => {
                     <a className="link link-hover">Cookie policy</a>
                 </nav>
             </footer>
-            <footer className="footer bg-base-200 text-base-content border-base-300 border-t px-10 py-4">
+            <footer className="footer  border-base-300 border-t px-10 py-4">
                 <aside className="grid-flow-col items-center">
                     <svg
                         width="24"

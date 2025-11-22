@@ -34,7 +34,7 @@ const Hero = () => {
                 <span className="text-xl font-bold">Google Play</span>
               </Link>
               <Link
-                to={"https://www.apple.com/app-store/"}
+                to={"https://apps.apple.com/us/iphone/apps"}
                 className="flex items-center btn w-[200px] h-14 justify-center rounded-sm bg-white transition"
               >
                 <img
