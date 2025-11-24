@@ -6,7 +6,7 @@ import { Link } from 'react-router';
 
 const AppCard = ({ id, image, title, downloads, ratingAvg }) => {  
     return (
-        <Link to={`/app-details/${id}`} className='w-80 h-[420px] flex flex-col justify-between p-4 rounded-sm bg-white'>
+        <Link to={`/app-details/${id}`} className='w-[348px] h-[435px] flex flex-col justify-between p-4 rounded-sm bg-white'>
             <img className='rounded-lg' src={image} alt={title} />
             <h1 className='text-xl font-medium'>{title}</h1>
             <div className='flex justify-between'>

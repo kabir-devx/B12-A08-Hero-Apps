@@ -6,12 +6,13 @@ const Navbar = () => {
    const activeClass = ({ isActive }) =>
       isActive
          ? "text-transparent bg-clip-text bg-gradient-to-r from-[#632EE3] to-[#9F62F2] " +
-        "after:absolute after:-bottom-[1px] after:left-0 after:w-full after:h-0.5 after:bg-gradient-to-r after:from-[#632EE3] after:to-[#9F62F2] after:rounded-full"
+         "after:absolute after:-bottom-[1px] after:left-0 after:w-full after:h-0.5 after:bg-gradient-to-r after:from-[#632EE3] after:to-[#9F62F2] after:rounded-full"
          : "";
 
    return (
+
       <div className="navbar shadow-sm">
-         <div className="navbar max-w-11/12 mx-auto">
+         <div className="max-w-11/12 flex w-full justify-between mx-auto">
             <div className="navbar-start">
                <div className="dropdown">
                   <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -68,6 +69,7 @@ const Navbar = () => {
             </div>
          </div>
       </div>
+
    );
 };
 
