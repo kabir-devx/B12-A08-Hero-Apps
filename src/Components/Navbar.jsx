@@ -47,7 +47,7 @@ const Navbar = () => {
                      alt="HERO.IO logo"
                      className="w-10 h-10 mr-2"
                   />
-                  <h1 className="font-bold text-lg mt-0.5">
+                  <h1 className="font-bold text-lg mt-0.5 bg-linear-to-r from-[#632EE3] to-[#9F62F2] bg-clip-text text-transparent">
                      HERO.IO
                   </h1>
                </Link>
