@@ -11,14 +11,14 @@ const Navbar = () => {
 
    return (
 
-      <div className="navbar shadow-sm">
-         <div className="max-w-11/12 flex w-full justify-between mx-auto">
+      <div className="bg-white shadow-sm navbar">
+         <div className="flex justify-between w-full mx-auto max-w-10/12">
             <div className="navbar-start">
                <div className="dropdown">
                   <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
                      <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        className="h-5 w-5"
+                        className="w-5 h-5"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
@@ -34,38 +34,41 @@ const Navbar = () => {
                   </div>
                   <ul
                      tabIndex="-1"
-                     className="menu menu-sm dropdown-content font-semibold  bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+                     className="p-2 mt-3 font-semibold shadow menu menu-sm dropdown-content bg-base-100 rounded-box z-1 w-52"
                   >
                      <li><NavLink to="/" className={activeClass}>Home</NavLink></li>
                      <li><NavLink to="/apps" className={activeClass}>Apps</NavLink></li>
                      <li><NavLink to="/installation" className={activeClass}>Installation</NavLink></li>
                   </ul>
                </div>
-               <div className="flex items-center">
+               <Link to="/" className="flex items-center">
                   <img
                      src="/logo.png"
                      alt="HERO.IO logo"
                      className="w-10 h-10 mr-2"
                   />
-                  <Link to="/" className="font-bold text-lg mt-0.5">
+                  <h1 className="font-bold text-lg mt-0.5">
                      HERO.IO
-                  </Link>
-               </div>
+                  </h1>
+               </Link>
             </div>
-            <div className="navbar-center hidden lg:flex">
-               <ul className="menu menu-horizontal font-semibold">
+            <div className="hidden navbar-center lg:flex">
+               <ul className="font-semibold menu menu-horizontal">
                   <li><NavLink to="/" className={activeClass}>Home</NavLink></li>
                   <li><NavLink to="/apps" className={activeClass}>Apps</NavLink></li>
                   <li><NavLink to="/installation" className={activeClass}>Installation</NavLink></li>
                </ul>
             </div>
             <div className="navbar-end">
-               <div className="flex items-center btn">
+               <Link
+                  to="https://github.com/kabir-devx"
+                  target="_blank"
+                  className="relative flex items-center gap-2 px-5 py-3 rounded-md bg-linear-to-r from-[#632EE3] to-[#9F62F2] text-white font-semibold shadow-lg transition-all duration-200 hover:scale-105 hover:shadow-2xl"
+               >
                   <IoLogoGithub size={20} />
-                  <Link to="https://github.com/kabir-devx" target="_blank">
-                     Contribute
-                  </Link>
-               </div>
+                  <span>Contribute</span>
+               </Link>
+
             </div>
          </div>
       </div>

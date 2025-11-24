@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <div>
       <div className="hero pt-20 bg-[#f5f5f5]">
-        <div className="hero-content text-center">
+        <div className="text-center hero-content">
           <div className="max-w-4xl">
             <h1 className="text-7xl text-[#001931] font-bold">
               We Build{" "}
@@ -21,8 +21,9 @@ const Hero = () => {
               turn your ideas into digital experiences that truly make an
               impact.
             </p>
-            <div className="flex gap-4 justify-center">
+            <div className="flex justify-center gap-4">
               <Link
+                target="_blank"
                 to={"https://play.google.com/store/apps?hl=en_GB"}
                 className="flex btn w-[200px] items-center justify-center h-14 rounded-sm bg-white transition"
               >
@@ -34,6 +35,7 @@ const Hero = () => {
                 <span className="text-xl font-bold">Google Play</span>
               </Link>
               <Link
+                target="_blank"
                 to={"https://apps.apple.com/us/iphone/apps"}
                 className="flex items-center btn w-[200px] h-14 justify-center rounded-sm bg-white transition"
               >
@@ -58,17 +60,17 @@ const Hero = () => {
         <div className="flex justify-center gap-4">
           <div className="flex flex-col gap-4 h-36 w-80">
             <p>Total Downloads</p>
-            <h1 className="font-bold text-6xl">29.6M</h1>
+            <h1 className="text-6xl font-bold">29.6M</h1>
             <p>21% more than last month</p>
           </div>
           <div className="flex flex-col gap-4 h-36 w-80">
             <p>Total Reviews</p>
-            <h1 className="font-bold text-6xl">906K</h1>
+            <h1 className="text-6xl font-bold">906K</h1>
             <p>46% more than last month</p>
           </div>
           <div className="flex flex-col gap-4 h-36 w-80">
             <p>Active Apps</p>
-            <h1 className="font-bold text-6xl">132+</h1>
+            <h1 className="text-6xl font-bold">132+</h1>
             <p>31 more will Launch</p>
           </div>
         </div>
