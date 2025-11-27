@@ -1,5 +1,5 @@
 import { Search } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import useData from '../Hooks/useData';
 import AppCard from '../Components/AppCard';
 import { ClimbingBoxLoader } from 'react-spinners';
@@ -7,7 +7,17 @@ import { ClimbingBoxLoader } from 'react-spinners';
 const Apps = () => {
   const { apps, loading } = useData()
   const [search, setSearch] = useState('')
+  const [searchLoading, setSearchLoading] = useState(false)
 
+
+  useEffect(() => {
+    setSearchLoading(true)
+    const timer = setTimeout(() => {
+      setSearchLoading(false)
+    }, 300) 
+
+    return () => clearTimeout(timer)
+  }, [search])
 
   const filteredApps = apps.filter((app) =>
     app.title.toLowerCase().includes(search.trim().toLowerCase())
@@ -48,6 +58,10 @@ const Apps = () => {
       {loading ? (
         <div className="flex items-center justify-center min-h-screen">
           <ClimbingBoxLoader color="#8d73f4" size={20} />
+        </div>
+      ) : searchLoading ? (
+        <div className="flex items-center justify-center py-20">
+          <ClimbingBoxLoader color="#8d73f4" size={15} />
         </div>
       ) : filteredApps.length > 0 ? (
         <div className="grid grid-cols-1 gap-4 mx-auto mt-10 mb-20 max-w-11/12 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
