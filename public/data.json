@@ -544,7 +544,9 @@
     "title": "GitHub",
     "companyName": "GitHub, Inc.",
     "id": 31,
-    "description": "GitHub for Android lets you triage issues, review pull requests, and merge code from anywhere. Stay in sync with your team on the go.",
+
+    "description": "GitHub for Android allows developers to stay productive and connected to their projects from anywhere. You can review pull requests, browse code changes with diffs, manage and respond to issues, and participate in discussions without needing a computer. The app keeps your workflow smooth by sending notifications for updates and comments. Designed with a clean interface and strong performance, GitHub for Android ensures you stay organized, collaborate efficiently, and remain involved in your repositories while on the move.",
+
     "size": 25.6,
     "reviews": 120000,
     "ratingAvg": 4.7,
@@ -562,7 +564,7 @@
     "title": "Steam",
     "companyName": "Valve Corporation",
     "id": 32,
-    "description": "Steam Mobile app lets you browse the Steam store, chat with friends, and do Steam Guard mobile authentication — all from your phone.",
+    "description": "The Steam Mobile app keeps you connected to the world’s largest gaming platform wherever you go. You can browse the store, track discounts, explore new releases, and manage your game library easily. Stay in touch with friends through integrated chat, notifications, and community features. Steam Guard provides essential two-factor authentication for secure account protection. With a clean interface and reliable performance, the app offers convenient access to key Steam features, helping you stay updated and engaged with your gaming world anytime.",
     "size": 52.3,
     "reviews": 850000,
     "ratingAvg": 4.4,

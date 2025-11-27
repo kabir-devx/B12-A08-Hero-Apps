@@ -52,13 +52,18 @@ const Installation = () => {
 						</div>
 						<div className='flex justify-between mt-4'>
 							<h1 className='text-2xl font-semibold'>{install.length} Apps Found</h1>
-							<label className='w-full max-w-xs form-control' htmlFor="">
-								<select value={sortOrder || 0} className='border select' onChange={e => setSortOrder(e.target.value)} id="">
-									<option value="none">Sort By Downloads</option>
-									<option value="Downloads-asc">low-&gt;High</option>
-									<option value="Downloads-desc">High-&gt;low</option>
-								</select>
-							</label>
+							<div className='w-full max-w-xs form-control'  htmlFor="">
+									<select
+										value={String(sortOrder || "none")}
+										className='select'
+										onChange={e => setSortOrder(e.target.value)}
+									>
+										<option value="none">Sort By Downloads</option>
+										<option value="Downloads-asc">Low to High</option>
+										<option value="Downloads-desc">High to Low</option>
+									</select>
+
+							</div>
 						</div>
 					</div>
 					{install.length > 0 ? (<div className='flex flex-col gap-4 mt-10'>

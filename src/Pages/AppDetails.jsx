@@ -98,8 +98,8 @@ const AppDetails = () => {
                 <h2 className="mt-8 text-2xl font-bold">Ratings</h2>
                 <Recharts ratings={ratings} />
             </div>
-            <div className='mx-auto mt-10 max-w-10/12'>
-                <hr className='my-10' />
+            <div className='mx-auto mt-10 mb-10 max-w-11/12'>
+                <hr className='my-10 ' />
                 <h1 className='text-2xl font-bold'>Description</h1>
                 <p className='mt-4 text-[#627382]'>{description}</p>
             </div>
