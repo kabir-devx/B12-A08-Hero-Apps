@@ -3,8 +3,8 @@ import { Bar, BarChart, CartesianGrid, Legend, ResponsiveContainer, Tooltip, XAx
 
 const Recharts = ({ ratings }) => {
     return (
-        <div className="w-full mt-3 h-[400px]">
-            <ResponsiveContainer width="100%" height="100%">
+        <div className="w-full mx-auto mt-3 h-[400px]">
+            <ResponsiveContainer width="100%" height="100%" >
                 <BarChart
                     data={ratings}
                     layout="vertical"

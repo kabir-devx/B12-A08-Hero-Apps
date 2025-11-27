@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router";
 
 const Hero = () => {
@@ -51,13 +50,13 @@ const Hero = () => {
         </div>
       </div>
       <div className="flex justify-center bg-[#f5f5f5] ">
-        <img className="" src="/src/assets/hero.png" alt="" />
+        <img className="" src="/hero.png" alt="" />
       </div>
-      <div className="bg-linear-to-br from-[#632EE3] to-[#9F62F2] w-full h-[410px] flex gap-10 text-center flex-col justify-center text-white">
+      <div className="bg-linear-to-br from-[#632EE3] to-[#9F62F2] w-full p-10 flex gap-10 text-center flex-col justify-center text-white">
         <h1 className="text-5xl font-bold">
           Trusted by Millions, Built for You
         </h1>
-        <div className="flex justify-center gap-4">
+        <div className="grid items-center justify-center max-w-5xl mx-auto lg:grid-cols-3">
           <div className="flex flex-col gap-4 h-36 w-80">
             <p>Total Downloads</p>
             <h1 className="text-6xl font-bold">29.6M</h1>

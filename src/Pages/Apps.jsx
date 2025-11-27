@@ -1,7 +1,8 @@
 import { Search } from 'lucide-react';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import useData from '../Hooks/useData';
 import AppCard from '../Components/AppCard';
+import { ClimbingBoxLoader } from 'react-spinners';
 
 const Apps = () => {
   const { apps, loading } = useData()
@@ -21,7 +22,8 @@ const Apps = () => {
   };
   return (
     <div className="flex flex-col pt-20 bg-[#f5f5f5]">
-      <div className={` ${filteredApps.length === 0 ? "hidden" : "" }`}>
+      <div className={`${!loading && filteredApps.length === 0 ? "hidden" : ""}`}>
+
         <div>
           <h1 className="text-center text-5xl mb-4 font-bold text-[#001931]">Our All Applications</h1>
           <p className='text-center text-[#627382]'>Explore All Apps on the Market developed by us. We code for Millions</p>
@@ -43,26 +45,40 @@ const Apps = () => {
         </div>
       </div>
 
-      {filteredApps.length > 0 ?
+      {loading ? (
+        <div className="flex items-center justify-center min-h-screen">
+          <ClimbingBoxLoader color="#8d73f4" size={20} />
+        </div>
+      ) : filteredApps.length > 0 ? (
         <div className="grid grid-cols-1 gap-4 mx-auto mt-10 mb-20 max-w-11/12 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {filteredApps.map((app) => (
-            <AppCard key={app.id}
+            <AppCard
+              key={app.id}
               id={app.id}
               image={app.image}
               title={app.title}
               downloads={formatDownloads(app.downloads)}
-              ratingAvg={app.ratingAvg} />
+              ratingAvg={app.ratingAvg}
+            />
           ))}
         </div>
+      ) : (
+        <div className="flex flex-col items-center justify-center mx-auto mt-20 mb-10 max-w-7xl">
+          <img src="/App-Error.png" alt="Not Found" className="mb-6 w-60" />
+          <h1 className="mt-12 text-5xl font-semibold">OPPS!! APP NOT FOUND</h1>
+          <p className="mt-3 text-xl text-[#627382]">
+            The App you are requesting is not found on our system. Please try another app.
+          </p>
+          <button
+            onClick={() => setSearch('')}
+            className="btn btn-lg mt-4 bg-linear-to-r from-[#632EE3] to-[#9F62F2] text-white"
+          >
+            Go Back!
+          </button>
+        </div>
+      )}
 
-        : (
-          <div className='flex flex-col items-center justify-center mx-auto max-w-7xl'>
-            <img src="/src/assets/App-Error.png" alt="" />
-            <h1 className='mt-12 text-5xl font-semibold '>OPPS!! APP NOT FOUND</h1>
-            <p className='mt-3 text-xl text-[#627382]'>The App you are requesting is not found on our system.  please try another apps</p>
-            <button onClick={() => setSearch('')} className='btn btn-lg mt-4 bg-linear-to-r from-[#632EE3] to-[#9F62F2] text-white'>Go Back!</button>
-          </div>
-        )}
+      
     </div>
   );
 };

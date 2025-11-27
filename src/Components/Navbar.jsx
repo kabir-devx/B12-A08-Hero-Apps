@@ -1,4 +1,3 @@
-import React from "react";
 import { IoLogoGithub } from "react-icons/io";
 import { Link, NavLink } from "react-router";
 
@@ -38,7 +37,7 @@ const Navbar = () => {
                   >
                      <li><NavLink to="/" className={activeClass}>Home</NavLink></li>
                      <li><NavLink to="/apps" className={activeClass}>Apps</NavLink></li>
-                     <li><NavLink to="/installation" className={activeClass}>Installation</NavLink></li>
+                     <li><NavLink to="/installation" className={activeClass}>My Installation</NavLink></li>
                   </ul>
                </div>
                <Link to="/" className="flex items-center">
@@ -56,7 +55,7 @@ const Navbar = () => {
                <ul className="font-semibold menu menu-horizontal">
                   <li><NavLink to="/" className={activeClass}>Home</NavLink></li>
                   <li><NavLink to="/apps" className={activeClass}>Apps</NavLink></li>
-                  <li><NavLink to="/installation" className={activeClass}>Installation</NavLink></li>
+                  <li><NavLink to="/installation" className={activeClass}>My Installation</NavLink></li>
                </ul>
             </div>
             <div className="navbar-end">
